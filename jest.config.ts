@@ -1,4 +1,4 @@
-import type {Config} from 'jest';
+import type { Config } from 'jest';
 
 const config: Config = {
   collectCoverageFrom: [
@@ -6,18 +6,18 @@ const config: Config = {
     '!**/node_modules/**',
     '!**/vendor/**',
   ],
-  preset: "jest-preset-angular",
-  setupFilesAfterEnv: ["<rootDir>/setup-jest.ts"],
+  preset: 'jest-preset-angular',
+  setupFilesAfterEnv: ['<rootDir>/setup-jest.ts'],
   globalSetup: 'jest-preset-angular/global-setup',
-  testPathIgnorePatterns: [
-    "<rootDir>/node_modules/",
-    "<rootDir>/dist/"
-  ],
+  testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/dist/'],
   transform: {
-    '^.+\\.(ts|js|html)$': ['jest-preset-angular', {
-      tsConfig: "<rootDir>/tsconfig.spec.json",
-      stringifyContentPathRegex: "\\.html$"
-    }]
+    '^.+\\.(ts|js|html)$': [
+      'jest-preset-angular',
+      {
+        tsConfig: '<rootDir>/tsconfig.spec.json',
+        stringifyContentPathRegex: '\\.html$',
+      },
+    ],
   },
 };
 
